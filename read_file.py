@@ -12,7 +12,7 @@ def read_file(filename: str) -> list[int]:
     # Read the file
     f=open("data.txt",mode='r')
     s=f.readline()
-    return   list(map(lambda x:int(x),filter(lambda x: x.isdigit(),s)))  #list(filter(lambda x: x.isdigit(),s))
+    return   [int(i) for i in s if i.isdigit()]#list(map(lambda x:int(x),filter(lambda x: x.isdigit(),s)))  #list(filter(lambda x: x.isdigit(),s)) 
 print(read_file('data.txt'))
 
 #Print list from file
